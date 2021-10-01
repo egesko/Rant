@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".HomeActivity" android:background="#000000">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="17.5dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            android:layout_width="fill_parent" android:id="@+id/linearLayout">
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:src="@drawable/nav_home_icon" android:id="@+id/homeNavButton"
+                android:layout_marginLeft="30dp" android:layout_marginStart="25dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="VectorDrawableCompat"
+                android:elevation="2dp"
+                android:layout_weight="0"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:src="@drawable/nav_featured_icon"
+                android:id="@+id/featuredNavButton"
+                android:layout_marginBottom="30dp"
+                tools:ignore="VectorDrawableCompat"
+                android:elevation="2dp"
+                android:layout_weight="5"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:src="@drawable/nav_create_icon" android:id="@+id/createNavButton"
+                android:layout_marginBottom="30dp"
+                tools:ignore="VectorDrawableCompat"
+                android:elevation="2dp"
+                android:layout_weight="0"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:src="@drawable/nav_groups_icon" android:id="@+id/groupsNavButton"
+                android:layout_marginBottom="40dp" tools:ignore="VectorDrawableCompat"
+                android:elevation="2dp"
+                android:layout_weight="5"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:src="@drawable/nav_profile_icon" android:id="@+id/profileNavButton"
+                android:layout_marginRight="30dp" android:layout_marginEnd="25dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="VectorDrawableCompat"
+                android:elevation="2dp"
+                android:layout_weight="0"/>
+    </LinearLayout>
+    <ImageView
+            android:src="@drawable/rant_container"
+            android:id="@+id/rantTextBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout" android:layout_width="0dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp" android:layout_marginBottom="80dp"
+            android:layout_marginLeft="15dp" android:layout_marginStart="15dp" android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/searchBar" android:layout_marginTop="20dp"/>
+    <Button
+            android:text="DISLIKE"
+            android:gravity="left|center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="60dp" android:id="@+id/dislikeButton"
+            android:background="@drawable/rant_dislike_button"
+            app:layout_constraintEnd_toEndOf="@+id/rantTextBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rantTextBackground" android:fontFamily="@font/fjalla_one"
+            android:textSize="18sp" android:textColor="#000000" android:paddingLeft="60dp"
+            android:translationZ="0dp" tools:ignore="RtlHardcoded"
+            app:layout_constraintStart_toEndOf="@+id/commentsButton" android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
+    <Button
+            android:text="LIKE"
+            android:gravity="left|center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="60dp" android:id="@+id/likeButton"
+            android:background="@drawable/rant_like_button"
+            app:layout_constraintStart_toStartOf="@+id/rantTextBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rantTextBackground" android:fontFamily="@font/fjalla_one"
+            android:textSize="18sp" android:textColor="#000000" android:paddingLeft="60dp"
+            android:translationZ="0dp" app:layout_constraintEnd_toStartOf="@+id/commentsButton"
+            android:layout_marginRight="20dp" android:layout_marginEnd="20dp"/>
+    <ScrollView
+            android:layout_height="0dp"
+            android:background="@drawable/rant_text_background" android:paddingLeft="25dp" android:paddingRight="25dp"
+            android:paddingTop="30dp" app:layout_constraintStart_toStartOf="@+id/rantTextBackground"
+            app:layout_constraintEnd_toEndOf="@+id/rantTextBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/rantTextBackground" android:id="@+id/scrollView"
+            android:layout_width="0dp" android:layout_marginLeft="7dp" android:layout_marginStart="7dp"
+            android:layout_marginRight="7dp" android:layout_marginEnd="7dp"
+            app:layout_constraintTop_toTopOf="@+id/rantTextBackground" android:layout_marginTop="80dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rantBody"
+                    tools:text="Rant Body - This is a test to see what multiple lines of text looks like."
+                    android:textColor="#ffffff" android:fontFamily="@font/nunito"
+                    android:textSize="14sp" android:lineSpacingExtra="2dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+            android:text="Rant Title - Some extra test text"
+            android:textAllCaps="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/rantTitle"
+            app:layout_constraintStart_toStartOf="@+id/rantTextBackground"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toTopOf="@+id/rantTextBackground"
+            android:layout_marginLeft="30dp" android:layout_marginStart="30dp" android:textSize="16sp"
+            android:fontFamily="@font/nunito_semibold" android:lineSpacingExtra="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView" app:layout_constraintEnd_toStartOf="@+id/tagButton"
+            android:layout_marginRight="30dp" android:layout_marginEnd="30dp"/>
+    <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp" android:id="@+id/commentsButton"
+            app:layout_constraintBottom_toBottomOf="@+id/dislikeButton"
+            app:layout_constraintTop_toTopOf="@+id/dislikeButton" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/comments_icon"/>
+    <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp" android:id="@+id/tagButton"
+            android:background="@drawable/bookmark_icon" app:layout_constraintEnd_toEndOf="@+id/rantTextBackground"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintTop_toTopOf="@+id/rantTextBackground"
+            android:layout_marginRight="30dp" android:layout_marginEnd="30dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/search_bar"
+            android:ems="10"
+            android:id="@+id/searchBar"
+            app:layout_constraintEnd_toEndOf="@+id/rantTextBackground"
+            app:layout_constraintStart_toStartOf="@+id/rantTextBackground"
+            app:layout_constraintHorizontal_bias=".5" android:textColor="#FFFFFF"
+            android:fontFamily="@font/nunito_semibold" android:textSize="14sp" android:paddingLeft="30dp"
+            android:inputType="textPhonetic" android:textStyle="bold|italic" android:hint="Search Tags"
+            android:textColorHint="#8A8A8A" app:layout_constraintTop_toBottomOf="@+id/textView5"
+            android:layout_marginTop="10dp"/>
+    <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp" android:background="@drawable/search_icon" android:id="@+id/searchIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/searchBar"
+            app:layout_constraintTop_toTopOf="@+id/searchBar" app:layout_constraintStart_toStartOf="@+id/searchBar"
+            android:layout_marginLeft="5dp" android:layout_marginStart="5dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/volume_up_icon_disabled"
+            android:id="@+id/likeIconButton" app:layout_constraintBottom_toBottomOf="@+id/likeButton"
+            app:layout_constraintTop_toTopOf="@+id/likeButton" app:layout_constraintStart_toStartOf="@+id/likeButton"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"
+            android:translationZ="5dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/volume_off_icon_disabled"
+            android:id="@+id/dislikeIconButton" app:layout_constraintBottom_toBottomOf="@+id/dislikeButton"
+            app:layout_constraintTop_toTopOf="@+id/dislikeButton"
+            app:layout_constraintStart_toStartOf="@+id/dislikeButton" android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:translationZ="5dp"/>
+    <TextView
+            android:text="Rant"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            android:textColor="#ffffff" android:fontFamily="@font/pacifico"
+            app:layout_constraintStart_toStartOf="@+id/searchBar"
+            app:layout_constraintTop_toTopOf="parent" android:textSize="24sp" android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"/>
+    <Switch
+            android:layout_width="95dp"
+            android:layout_height="10dp" android:id="@+id/filterSwitch"
+            android:background="@drawable/filter_switch"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5" app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/searchBar" android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" android:textColor="#FFFFFF" android:fontFamily="@font/nunito_semibold"
+            android:textSize="15sp" android:paddingLeft="12dp"
+            android:text="Filter" android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

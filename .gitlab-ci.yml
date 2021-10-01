@@ -1,0 +1,87 @@
+#Ug_4 runner file
+stages:
+    - mavenbuild
+    - androidbuild
+    - maventest
+    - androidtest
+    - mavenDeploy
+
+maven-build: 
+    stage: mavenbuild
+    only:
+        refs:
+          - master
+    tags:
+        - springboot_tag
+    script:
+        - cd Backend
+        - cd RantTables
+        - mvn package -B
+    retry: 2
+
+android-build:
+    image: javiersantos/android-ci:latest
+    stage: androidbuild
+    only:
+        refs:
+            - master
+    before_script:
+        - export GRADLE_USER_HOME=`pwd`/.gradle
+        - chmod +x ./Frontend/gradlew
+    tags:
+        - android_tag
+    script:
+        - cd Frontend
+        - ./gradlew build
+    artifacts:
+        paths:
+            - Android_test/app/build/outputs/
+    retry: 2
+    
+maven-test:
+    stage: maventest
+    only:
+        refs:
+          - master
+    tags:
+        - springboot_tag
+    script:
+        - cd Backend
+        - cd RantTables
+        - mvn test
+    artifacts:
+        paths:
+            - Backend/RantTables/target/*.jar
+    retry: 2
+
+android-test:
+    image: javiersantos/android-ci:latest
+    stage: androidtest
+    only:
+        refs:
+          - master
+    before_script:
+        - export GRADLE_USER_HOME=`pwd`/.gradle
+        - chmod +x ./Frontend/gradlew
+    tags:
+        - android_tag
+    script:
+        - cd Frontend
+        - ./gradlew test
+    retry: 2
+
+autoDeploy: 
+    stage: mavenDeploy
+    only:
+        refs:
+          - master
+    tags:
+        - springboot_tag
+    script:
+        - cd Backend
+        - cd RantTables
+        - mvn package 
+        - sudo mv target/*.jar /target/web-demo.jar
+        - sudo systemctl stop system-web-demo
+        - sudo systemctl start system-web-demo
+    retry: 2

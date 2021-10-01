@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@drawable/backdrop">
+
+    <Button
+            android:text="Add Picture"
+            android:layout_width="167dp"
+            android:layout_height="40dp" android:id="@+id/everyoneButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"
+            app:layout_constraintVertical_bias="0.776" android:textColor="#FDFDFD"
+            android:textSize="15sp"
+            android:background="@drawable/round_corners_464c6b" android:fontFamily="@font/nunito_semibold"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.516" android:layout_marginTop="32dp"
+            android:layout_marginRight="8dp" android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="CREATE!"
+            android:layout_width="350dp"
+            android:layout_height="60dp" android:id="@+id/groupCreateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"
+            app:layout_constraintVertical_bias="0.926" android:textColor="#FDFDFD"
+            android:textSize="15sp"
+            android:background="@drawable/round_corners_0f1923" android:fontFamily="@font/nunito_semibold"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"/>
+    <EditText
+            android:id="@+id/createGroupDesp"
+            android:layout_height="258dp"
+            android:layout_width="354dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.532"
+            android:background="@drawable/round_corners_111111"
+            android:textColor="#FDFDFD" android:textSize="15sp" android:hint="Description"
+            android:textColorHint="#8A8A8A" android:fontFamily="@font/nunito" android:paddingLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.438"/>
+    <EditText
+            android:id="@+id/createGroupName"
+            android:layout_height="45dp"
+            android:layout_width="350dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.269"
+            android:background="@drawable/round_corners_111111"
+            android:textColor="#FDFDFD" android:textSize="15sp"
+            android:textColorHint="#8A8A8A" android:fontFamily="@font/nunito" android:paddingLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.409"
+            android:hint="Name"/>
+    <TextView
+            android:text="Create Group"
+            android:layout_width="240dp"
+            android:layout_height="109dp" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp" android:layout_marginEnd="277dp" android:layout_marginRight="277dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="642dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="105dp" android:layout_marginStart="105dp" android:textColor="#FFFFFF"
+            android:textSize="36sp" android:fontFamily="@font/nunito_semibold"
+            app:layout_constraintHorizontal_bias="0.383"
+            app:layout_constraintVertical_bias="0.428"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

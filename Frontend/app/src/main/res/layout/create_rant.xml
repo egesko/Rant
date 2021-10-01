@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@drawable/backdrop">
+
+    <Button
+            android:text="Select Groups  >"
+            android:layout_width="167dp"
+            android:layout_height="40dp" android:id="@+id/selectGroupsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"
+            app:layout_constraintVertical_bias="0.802" android:textColor="#FDFDFD"
+            android:textSize="15sp"
+            android:background="@drawable/round_corners_464c6b" android:fontFamily="@font/nunito_semibold"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.86" android:layout_marginTop="32dp"
+    />
+    <Button
+            android:text="Everyone"
+            android:layout_width="167dp"
+            android:layout_height="40dp" android:id="@+id/everyoneButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"
+            app:layout_constraintVertical_bias="0.802" android:textColor="#FDFDFD"
+            android:textSize="15sp"
+            android:background="@drawable/round_corners_464c6b" android:fontFamily="@font/nunito_semibold"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1" android:layout_marginTop="32dp"
+            android:layout_marginRight="8dp" android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Rant!"
+            android:layout_width="350dp"
+            android:layout_height="60dp" android:id="@+id/rantCreateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"
+            app:layout_constraintVertical_bias="0.926" android:textColor="#FDFDFD"
+            android:textSize="15sp"
+            android:background="@drawable/round_corners_0f1923" android:fontFamily="@font/nunito_semibold"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"/>
+    <EditText
+            android:id="@+id/tagTextEdit"
+            android:layout_height="45dp"
+            android:layout_width="357dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.685"
+            android:background="@drawable/round_corners_111111" android:inputType="textEmailAddress"
+            android:textColor="#FDFDFD" android:textSize="15sp" android:hint="Tags"
+            android:textColorHint="#8A8A8A" android:fontFamily="@font/nunito" android:paddingLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.475"/>
+    <EditText
+            android:id="@+id/messageTextEdit"
+            android:layout_height="258dp"
+            android:layout_width="354dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.422"
+            android:background="@drawable/round_corners_111111" android:inputType="textEmailAddress"
+            android:textColor="#FDFDFD" android:textSize="15sp" android:hint="Message"
+            android:textColorHint="#8A8A8A" android:fontFamily="@font/nunito" android:paddingLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.438"/>
+    <EditText
+            android:id="@+id/titleTextEdit"
+            android:layout_height="45dp"
+            android:layout_width="350dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.199"
+            android:background="@drawable/round_corners_111111" android:inputType="textEmailAddress"
+            android:textColor="#FDFDFD" android:textSize="15sp"
+            android:textColorHint="#8A8A8A" android:fontFamily="@font/nunito" android:paddingLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.409"
+            android:hint="Title"/>
+    <TextView
+            android:text="Create Rant"
+            android:layout_width="227dp"
+            android:layout_height="75dp" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp" android:layout_marginEnd="277dp" android:layout_marginRight="277dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="642dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="105dp" android:layout_marginStart="105dp" android:textColor="#FFFFFF"
+            android:textSize="36sp" android:fontFamily="@font/nunito_semibold"
+            app:layout_constraintHorizontal_bias="0.383"
+            app:layout_constraintVertical_bias="0.428"/>
+    <TextView
+            android:layout_width="155dp"
+            android:layout_height="19dp" android:id="@+id/whoCanSee"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="520dp" android:layout_marginEnd="384dp" android:layout_marginRight="384dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="187dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="27dp" android:layout_marginStart="27dp" android:text="Who can see your rant?"
+            android:textColor="#FDFDFD" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0" android:fontFamily="@font/nunito"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
